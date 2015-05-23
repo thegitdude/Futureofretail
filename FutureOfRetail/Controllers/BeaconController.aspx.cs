@@ -21,7 +21,6 @@ namespace FutureOfRetail.Controllers
         [ScriptMethod(UseHttpGet = true)]
         public static Beacon GetBeaconById(int id)
         {
-            //html encode
             return BeaconService.GetBeaconData(id);
         }
 

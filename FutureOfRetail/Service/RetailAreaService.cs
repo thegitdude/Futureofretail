@@ -19,7 +19,7 @@ namespace FutureOfRetail.Service
                 using (var sqlCon = ConnectionClass.GetCon())
                 {
                     areas =
-                        sqlCon.Query<RetailArea>(String.Format(@"SELECT * from FROM [{0}].[dbo].[RetailArea]",
+                        sqlCon.Query<RetailArea>(String.Format(@"SELECT * FROM [{0}].[dbo].[RetailArea]",
                         ConnectionClass.sampleDatabaseName)).ToList();
 
                     // Do something with the results:
