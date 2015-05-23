@@ -29,10 +29,7 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="email">Section:</label>
         <div class="col-sm-10">
-            <select class="col-md-6 col-sm-6">
-                <option value="food">Food</option>
-                <option value="clothing">Clothing</option>
-                <option value="nonfood">Non-Food</option>
+            <select class="col-md-6 col-sm-6" data-bind="options: retailAreas">
             </select>
         </div>
     </div>
@@ -42,4 +39,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </div>
     </div>
+    <script src="Scripts/knockout-3.3.0.js" type="text/javascript"></script>
+    <script src="Scripts/Departments.js" type="text/javascript"></script>
 </asp:Content>
+                
