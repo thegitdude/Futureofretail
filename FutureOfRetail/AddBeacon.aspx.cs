@@ -28,7 +28,7 @@ namespace FutureOfRetail
         [WebMethod]
         public static void AddBeacon(Beacon b)
         {
-            return BeaconService.AddBeacon(b);
+            BeaconService.AddBeacon(b);
         }
 
     }
