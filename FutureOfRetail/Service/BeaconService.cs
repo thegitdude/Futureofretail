@@ -45,7 +45,7 @@ namespace FutureOfRetail.Service
                 {
                     beacon =
                         sqlCon.Query<Beacon>(String.Format(@"SELECT TOP 1 [Id], [BeaconId], [RetailAreaId], [ShopId]
-                                                 FROM [{0}].[dbo].[Beacon] where BeaconId =@beaconId", new { beaconId = beaconId }, ConnectionClass.sampleDatabaseName)).FirstOrDefault();
+                                                 FROM [{0}].[dbo].[Beacon] where BeaconId =@beaconId", ConnectionClass.sampleDatabaseName), new { beaconId = beaconId }).FirstOrDefault();
 
                     // Do something with the results:
                     // Additional code here...
