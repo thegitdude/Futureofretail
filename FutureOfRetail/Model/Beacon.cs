@@ -5,15 +5,14 @@ using System.Web;
 
 namespace FutureOfRetail.Model
 {
-    public class Shop
+    public class Beacon
     {
         public int Id { get; set; }
 
-        public string Name { get; set; }
+        public string BeaconID { get; set; }
 
-        public string Type { get; set; }
+        public string RetailAreaID { get; set; }
 
-        public string url { get; set; }
 
     }
 }
