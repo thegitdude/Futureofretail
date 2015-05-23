@@ -11,7 +11,7 @@ namespace FutureOfRetail.Tools
     {
         public static readonly string sampleDatabaseName = "futureofretail"; //i.e. "master", etc.
         public static readonly string sampleDatabaseNameCloud = "futureofretail"; //i.e. "master", etc.
-        private static string constr = @"Server=mssql1.gear.host;Database=retail;User Id=futureofretail;Password=Lf2b9iC#^y8A";
+        private static string constr = @"Server=mssql1.gear.host;Database=futureofretail;User Id=futureofretail;Password=Lf2b9iC#^y8A";
         private static string constrLocal = @"Server=ASUS\SQLEXPRESS;Database=retail;Trusted_Connection=Yes";
 
 

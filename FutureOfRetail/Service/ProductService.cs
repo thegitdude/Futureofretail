@@ -66,7 +66,7 @@ namespace FutureOfRetail.Service
                 {
                     product =
                         sqlCon.Query<Product>(String.Format(@"SELECT TOP 1 [Id], [Name], [Description], [Url], [ShopId], [Code]
-                                                 FROM [{0}].[dbo].[Product] where name Code='@code'", new { code = code }, ConnectionClass.sampleDatabaseName)).FirstOrDefault();
+                                                 FROM [{0}].[dbo].[Product] where Code=@code", ConnectionClass.sampleDatabaseName), new { code = code }).FirstOrDefault();
 
                 }
             }
