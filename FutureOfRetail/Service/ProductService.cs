@@ -20,8 +20,8 @@ namespace FutureOfRetail.Service
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Product] 
-                        (Name, Description, Url, ShopId) Values 
-                        (@name, @descriprion, @url, @shopId)", ConnectionClass.sampleDatabaseName), new
+                        (Name, Description, Url, ShopId, Code) Values 
+                        (@name, @descriprion, @url, @shopId, @code)", ConnectionClass.sampleDatabaseName), new
                                                                        {
                                                                            name = p.Name,
                                                                            descriprion = p.Description,
@@ -39,14 +39,14 @@ namespace FutureOfRetail.Service
             }
         }
 
-        public static List<Product> GetProductsByQuerry(string productName)
+        public static List<Product> GetProductsByName(string productName)
         {
-            List<Product> questions = new List<Product>();
+            List<Product> products = new List<Product>();
             try
             {
                 using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
                 {
-                    questions =
+                    products =
                         sqlCon.Query<Product>(String.Format(@"SELECT TOP 20 [Id], [Name], [Description], [Url], [ShopId]
                                                  FROM [{0}].[dbo].[Product] where name LIKE '%@productName%'",new {ProductName=productName}, ConnectionClass.sampleDatabaseName)).ToList();
 
@@ -58,7 +58,28 @@ namespace FutureOfRetail.Service
             {
                 Console.WriteLine(ex.Message);
             }
-            return questions;
+            return products;
+        }
+        public static List<Product> GetProductsByCode(int code)
+        {
+            List<Product> products = new List<Product>();
+            try
+            {
+                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                {
+                    products =
+                        sqlCon.Query<Product>(String.Format(@"SELECT TOP 20 [Id], [Name], [Description], [Url], [ShopId], [Code]
+                                                 FROM [{0}].[dbo].[Product] where name Code=@code'", new { code = code }, ConnectionClass.sampleDatabaseName)).ToList();
+
+                    // Do something with the results:
+                    // Additional code here...
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return products;
         }
 
         public static void AddTagForProductId(int productId, string tagName)

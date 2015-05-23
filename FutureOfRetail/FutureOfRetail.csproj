@@ -319,6 +319,7 @@
     <Compile Include="Model\Shop.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\BeaconService.cs" />
     <Compile Include="Service\ProductService.cs" />
     <Compile Include="Service\ShopService.cs" />
     <Compile Include="Service\UserService.cs" />
