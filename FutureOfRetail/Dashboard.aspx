@@ -8,7 +8,7 @@
   <title>Windows-8-like Animations with CSS3 and jQuery</title>
 
   <link rel="stylesheet" href="css/demo-styles.css" />
-  <script src="js/modernizr-1.5.min.js"></script>
+  <script src="Scripts/modernizr-2.6.2.js"></script>
 
 </head>
 
@@ -22,45 +22,42 @@
 <!--each tile should specify what page type it opens (to determine which animation) and the corresponding page name it should open-->
   <div class="dashboard clearfix">
     <ul class="tiles">
-      <div class="col1 clearfix">
-        <li class="tile tile-big tile-a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+      <div class="col1 clearfix" onclick="location.href='default.aspx';">
+        <li class="tile tile-big tile-1a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
           <div><p>Add new beacon</p></div>
           <div><p>Add new beacon</p></div>
         </li>
-        <li class="tile tile-big tile-b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
-          <div><p>Add new product</p></div>
-          <div><p>Add new product</p></div>
+        <li class="tile tile-big tile-2a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Add product</p></div>
+          <div><p>Add product</p></div>
         </li>
       </div>
 
       <div class="col2 clearfix">
-        <li class="tile tile-big tile-d slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
-          <div><p>Add new beacon</p></div>
-          <div><p>Add new beacon</p></div>
+        <li class="tile tile-big tile-1b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>See all beacons</p></div>
+          <div><p>See all beacons</p></div>
         </li>
-        <li class="tile tile-big tile-e slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
-          <div><p>Add new beacon</p></div>
-          <div><p>Add new beacon</p></div>
+        <li class="tile tile-big tile-2b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Feedback tool</p></div>
+          <div><p>Feedback tool</p></div>
         </li>
       </div>
 
-      <div class="col3 clearfix">      
-        <li class="tile tile-big tile-g slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
-          <div><p>Add new beacon</p></div>
-          <div><p>Add new beacon</p></div>
+      <div class="col3 clearfix" onclick="">      
+        <li class="tile tile-big tile-1c slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>See statistics</p></div>
+          <div><p>See statistics</p></div>
         </li>
-        <li class="tile tile-big tile-h slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
-          <div><p>Add new beacon</p></div>
-          <div><p>Add new beacon</p></div>
+        <li class="tile tile-big tile-1b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Help</p></div>
+          <div><p>Help</p></div>
         </li>
       </div>
     </ul>
   </div><!--end dashboard-->
-
-</div>
-<!--====================================end demo wrapper================================================-->
-  <script src="js/jquery-1.8.2.min.js"></script>
-  <script src="js/scripts.js"></script>
+  <script src="Scripts/jquery-1.8.2.js"></script>
+  <script src="Scripts/scripts.js"></script>
 
 </body>
 </html>
