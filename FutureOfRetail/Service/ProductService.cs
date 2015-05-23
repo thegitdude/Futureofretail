@@ -28,9 +28,6 @@ namespace FutureOfRetail.Service
                                                                            url = p.Url,
                                                                            shopId = p.ShopId
                                                                        });
-
-                    // Do something with the results:
-                    // Additional code here...
                 }
             }
             catch (Exception ex)
@@ -60,26 +57,24 @@ namespace FutureOfRetail.Service
             }
             return products;
         }
-        public static List<Product> GetProductsByCode(int code)
+        public static Product GetProductsByCode(string code)
         {
-            List<Product> products = new List<Product>();
+            var product = new Product();
             try
             {
                 using (var sqlCon = ConnectionClass.GetCon())
                 {
-                    products =
-                        sqlCon.Query<Product>(String.Format(@"SELECT TOP 20 [Id], [Name], [Description], [Url], [ShopId], [Code]
-                                                 FROM [{0}].[dbo].[Product] where name Code=@code'", new { code = code }, ConnectionClass.sampleDatabaseName)).ToList();
+                    product =
+                        sqlCon.Query<Product>(String.Format(@"SELECT TOP 1 [Id], [Name], [Description], [Url], [ShopId], [Code]
+                                                 FROM [{0}].[dbo].[Product] where name Code='@code'", new { code = code }, ConnectionClass.sampleDatabaseName)).FirstOrDefault();
 
-                    // Do something with the results:
-                    // Additional code here...
                 }
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            return products;
+            return product;
         }
 
         public static void AddTagForProductId(int productId, string tagName)

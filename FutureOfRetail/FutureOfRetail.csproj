@@ -191,6 +191,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.slider.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.tabs.min.css" />
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
+    <Content Include="Controllers\BarcodeController.aspx" />
     <Content Include="Controllers\BeaconController.aspx" />
     <Content Include="css\bootstrap\bootstrap-theme.css" />
     <Content Include="css\bootstrap\bootstrap-theme.min.css" />
@@ -306,6 +307,13 @@
       <DependentUpon>RegisterExternalLogin.aspx</DependentUpon>
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\BarcodeController.aspx.cs">
+      <DependentUpon>BarcodeController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\BarcodeController.aspx.designer.cs">
+      <DependentUpon>BarcodeController.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\BeaconController.aspx.cs">
       <DependentUpon>BeaconController.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>

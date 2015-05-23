@@ -9,9 +9,9 @@ namespace FutureOfRetail.Model
     {
         public int Id { get; set; }
 
-        public string BeaconID { get; set; }
+        public int BeaconID { get; set; }
 
-        public string RetailAreaID { get; set; }
+        public int RetailAreaID { get; set; }
 
         public int ShopId { get; set; }
     }
