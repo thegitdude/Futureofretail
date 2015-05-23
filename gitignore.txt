@@ -1,2 +1,2 @@
-C:\Code\FutureOfRetail\packages
-C:\Code\FutureOfRetail\FutureOfRetail\bin
+FutureOfRetail\packages
+FutureOfRetail\FutureOfRetail\bin
