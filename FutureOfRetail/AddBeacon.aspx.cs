@@ -25,5 +25,11 @@ namespace FutureOfRetail
            return RetailAreaService.GetShopAreas();
         }
 
+        [WebMethod]
+        public static void AddBeacon(Beacon b)
+        {
+            return BeaconService.AddBeacon(b);
+        }
+
     }
 }
