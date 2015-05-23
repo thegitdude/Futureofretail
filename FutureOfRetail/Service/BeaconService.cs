@@ -18,11 +18,12 @@ namespace FutureOfRetail.Service
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Beacon] 
-                        (BeaconId, RetailAreaId) Values 
-                        (@beaconId, @retailAreaId)", ConnectionClass.sampleDatabaseName), new
+                        (BeaconId, RetailAreaId, ShopId) Values 
+                        (@beaconId, @retailAreaId, @shopId)", ConnectionClass.sampleDatabaseName), new
                                                              {
                                                                  beaconId =b.BeaconID,
                                                                  retailAreaId = b.RetailAreaID,
+                                                                 shopID= b.ShopId,
                                                              });
 
                     // Do something with the results:
@@ -35,7 +36,7 @@ namespace FutureOfRetail.Service
             }
         }
 
-        public static Beacon GetProductsByQuerry(string beaconId)
+        public static Beacon GetBeaconData(int beaconId)
         {
             var beacon = new Beacon();
             try
