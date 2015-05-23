@@ -209,13 +209,7 @@ ul#menu {
 }
 
     .featured .content-wrapper {
-        background-color: #7ac0da;
-        background-image: -ms-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -o-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: -webkit-gradient(linear, left top, right top, color-stop(0, #7ac0da), color-stop(1, #a4d4e6));
-        background-image: -webkit-linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        background-image: linear-gradient(left, #7ac0da 0%, #a4d4e6 100%);
-        color: #3e5667;
+        background-color: #56D9C9;
         padding: 10px 0px 35px 20px;
     }
 
@@ -227,6 +221,10 @@ ul#menu {
         font-size: 1.1em;
     }
 
+.btn-primary{
+    background-color:#56D9C9!important;
+    border-color:#51CCBD!important;
+}
 /* page titles */
 hgroup.title {
     margin-bottom: 10px;

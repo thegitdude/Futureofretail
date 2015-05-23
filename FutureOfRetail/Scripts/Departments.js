@@ -9,7 +9,6 @@ var ViewModel = function () {
         type: "GET",
         success: function (data) {
             $.each(data.d, function(i,item){
-                console.log(item.Name);
                 retailAreas.push(item.Name);
             }.bind(ViewModel));
         },
