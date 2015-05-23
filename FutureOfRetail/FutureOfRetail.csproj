@@ -198,6 +198,7 @@
     <Content Include="css\bootstrap\bootstrap.css" />
     <Content Include="css\bootstrap\bootstrap.min.css" />
     <Content Include="css\default.css" />
+    <Content Include="Dashboard.aspx" />
     <Content Include="Images\accent.png" />
     <Content Include="Images\bullet.png" />
     <Content Include="Images\heroAccent.png" />
@@ -320,6 +321,13 @@
     </Compile>
     <Compile Include="Controllers\BeaconController.aspx.designer.cs">
       <DependentUpon>BeaconController.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.aspx.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dashboard.aspx.designer.cs">
+      <DependentUpon>Dashboard.aspx</DependentUpon>
     </Compile>
     <Compile Include="Default.aspx.cs">
       <DependentUpon>Default.aspx</DependentUpon>
