@@ -1,45 +1,64 @@
-﻿<%@ Page Title="Register your BeeList beacon" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FutureOfRetail._Default" %>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Default.aspx.cs" Inherits="FutureOfRetail.Dashboard" %>
 
-<asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
-    <section class="featured">
-        <div class="content-wrapper">
-            <p class="site-title">
-                <a runat="server" href="~/" class="pull-left">
-                    <img src="/Images/logo2.png" width="100" alt="Alternate Text" /></a>
-            </p>
-            <hgroup class="title">
-                <h2><%: Title %></h2>
-            </hgroup>
-        </div>
-    </section>
-</asp:Content>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Shop Id:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="Shop Id">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Beacon Id:</label>
-        <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="Enter Beacon Id">
-        </div>
-    </div>
-    <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Section:</label>
-        <div class="col-sm-10">
-            <select class="col-md-6 col-sm-6" data-bind="options: retailAreas">
-            </select>
-        </div>
-    </div>
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <title>Windows-8-like Animations with CSS3 and jQuery</title>
 
-    <div class="form-group">
-        <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary">Submit</button>
-        </div>
-    </div>
-    <script src="Scripts/knockout-3.3.0.js" type="text/javascript"></script>
-    <script src="Scripts/Departments.js" type="text/javascript"></script>
-</asp:Content>
-                
+  <link rel="stylesheet" href="css/demo-styles.css" />
+  <script src="Scripts/modernizr-2.6.2.js"></script>
+
+</head>
+
+<body>
+ <header>
+  
+ </header>
+  <!--===============================Start Demo====================================================-->
+<div class="demo-wrapper">
+<!-- classnames for the pages should include: 1) type of page 2) page name-->
+<!--each tile should specify what page type it opens (to determine which animation) and the corresponding page name it should open-->
+  <div class="dashboard clearfix">
+    <ul class="tiles">
+      <div class="col1 clearfix" onclick="location.href='addbeacon.aspx';">
+        <li class="tile tile-big tile-1a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Add new beacon</p></div>
+          <div><p>Add new beacon</p></div>
+        </li>
+        <li class="tile tile-big tile-2a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Add product</p></div>
+          <div><p>Add product</p></div>
+        </li>
+      </div>
+
+      <div class="col2 clearfix">
+        <li class="tile tile-big tile-1b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>See all beacons</p></div>
+          <div><p>See all beacons</p></div>
+        </li>
+        <li class="tile tile-big tile-2b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Feedback tool</p></div>
+          <div><p>Feedback tool</p></div>
+        </li>
+      </div>
+
+      <div class="col3 clearfix" onclick="">      
+        <li class="tile tile-big tile-1c slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>See statistics</p></div>
+          <div><p>See statistics</p></div>
+        </li>
+        <li class="tile tile-big tile-1b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+          <div><p>Help</p></div>
+          <div><p>Help</p></div>
+        </li>
+      </div>
+    </ul>
+  </div><!--end dashboard-->
+  <script src="Scripts/jquery-1.8.2.js"></script>
+  <script src="Scripts/scripts.js"></script>
+
+</body>
+</html>
+

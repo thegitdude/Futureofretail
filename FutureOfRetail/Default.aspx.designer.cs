@@ -7,11 +7,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace FutureOfRetail
-{
-
-
-    public partial class _Default
-    {
+namespace FutureOfRetail {
+    
+    
+    public partial class Dashboard {
     }
 }

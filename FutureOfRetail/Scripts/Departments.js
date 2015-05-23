@@ -4,18 +4,22 @@
 var ViewModel = function () {
     this.retailAreas = ko.observableArray();
     $.ajax({
-        url: "/Default.aspx/GetRetailAreas",
+        url: "/AddBeacon.aspx/GetRetailAreas",
         contentType: "application/json; charset=utf-8",
         type: "GET",
         success: function (data) {
-            $.each(data.d, function (innerObj,index) {
-                retailAreas.push(index.Name);
-            });
+            $.each(data.d, function(i,item){
+                console.log(item.Name);
+                retailAreas.push(item.Name);
+            }.bind(ViewModel));
         },
         error: function (data) {
             alert("error occured");
         }
     });
 };
-ko.applyBindings(ViewModel);
+$(document).ready(function () {
+    ko.applyBindings(ViewModel);
+});
+
 
