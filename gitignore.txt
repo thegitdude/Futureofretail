@@ -1,2 +1,2 @@
-FutureOfRetail\packages
-FutureOfRetail\FutureOfRetail\bin
+FutureOfRetail\packages\
+FutureOfRetail\FutureOfRetail\bin\
