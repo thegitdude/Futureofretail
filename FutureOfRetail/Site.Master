@@ -4,7 +4,7 @@
 <html lang="en">
 <head runat="server">
     <meta charset="utf-8" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - BeeList Application</title>
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
     </asp:PlaceHolder>
@@ -44,19 +44,14 @@
             <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p class="site-title">
-                        <a runat="server" href="~/">your logo here</a>
-                    </p>
-                </div>
                 <div class="float-right">
                     <section id="login">
                         <asp:LoginView runat="server" ViewStateMode="Disabled">
                             <AnonymousTemplate>
-                                <ul>
+                                <%--<ul>
                                     <li><a id="registerLink" runat="server" href="~/Account/Register">Register</a></li>
                                     <li><a id="loginLink" runat="server" href="~/Account/Login">Log in</a></li>
-                                </ul>
+                                </ul>--%>
                             </AnonymousTemplate>
                             <LoggedInTemplate>
                                 <p>
@@ -84,8 +79,8 @@
         </div>
         <footer>
             <div class="content-wrapper">
-                <div class="float-left">
-                    <p>&copy; <%: DateTime.Now.Year %> - My ASP.NET Application</p>
+                <div class="text-center copyright">
+                    <p>&copy; <%: DateTime.Now.Year %> - BeeList</p>
                 </div>
             </div>
         </footer>
