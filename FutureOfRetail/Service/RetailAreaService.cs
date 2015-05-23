@@ -16,10 +16,10 @@ namespace FutureOfRetail.Service
             List<RetailArea> areas = new List<RetailArea>();
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     areas =
-                        sqlCon.Query<RetailArea>(String.Format(@"SELECT * from FROM [{0}].[dbo].[ShopArea]",
+                        sqlCon.Query<RetailArea>(String.Format(@"SELECT * from FROM [{0}].[dbo].[RetailArea]",
                         ConnectionClass.sampleDatabaseName)).ToList();
 
                     // Do something with the results:

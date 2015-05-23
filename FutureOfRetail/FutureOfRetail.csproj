@@ -326,10 +326,13 @@
     <Compile Include="Model\Beacon.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Shop.cs" />
+    <Compile Include="Model\RetailArea.cs" />
+    <Compile Include="Model\Tag.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Service\BeaconService.cs" />
     <Compile Include="Service\ProductService.cs" />
+    <Compile Include="Service\RetailAreaService.cs" />
     <Compile Include="Service\ShopService.cs" />
     <Compile Include="Service\UserService.cs" />
     <Compile Include="Site.Master.cs">

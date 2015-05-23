@@ -16,7 +16,7 @@ namespace FutureOfRetail.Service
 
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Product] 
@@ -44,7 +44,7 @@ namespace FutureOfRetail.Service
             List<Product> products = new List<Product>();
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     products =
                         sqlCon.Query<Product>(String.Format(@"SELECT TOP 20 [Id], [Name], [Description], [Url], [ShopId]
@@ -65,7 +65,7 @@ namespace FutureOfRetail.Service
             List<Product> products = new List<Product>();
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     products =
                         sqlCon.Query<Product>(String.Format(@"SELECT TOP 20 [Id], [Name], [Description], [Url], [ShopId], [Code]
@@ -86,7 +86,7 @@ namespace FutureOfRetail.Service
         {
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Tag] 

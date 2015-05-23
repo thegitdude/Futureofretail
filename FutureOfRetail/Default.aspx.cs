@@ -20,10 +20,9 @@ namespace FutureOfRetail
 
         [WebMethod]
         [ScriptMethod(UseHttpGet = true)]
-        public static List<RetailArea> GetRetailAreas(int id)
+        public static List<RetailArea> GetRetailAreas()
         {
-            //html encode
-         
+           return RetailAreaService.GetShopAreas();
         }
 
     }

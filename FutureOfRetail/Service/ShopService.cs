@@ -16,7 +16,7 @@ namespace FutureOfRetail.Service
 
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Shop] 

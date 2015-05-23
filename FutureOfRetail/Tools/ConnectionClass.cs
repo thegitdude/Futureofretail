@@ -15,7 +15,7 @@ namespace FutureOfRetail.Tools
         private static string constrLocal = @"Server=ASUS\SQLEXPRESS;Database=retail;Trusted_Connection=Yes";
 
 
-        public static SqlConnection GetTrafficButtyCon()
+        public static SqlConnection GetCon()
         {
             try
             {
@@ -27,7 +27,7 @@ namespace FutureOfRetail.Tools
             }
             catch (Exception ex)
             {
-                return null;
+                throw ex;
             }
         }
     }

@@ -14,7 +14,7 @@ namespace FutureOfRetail.Service
         {
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Beacon] 
@@ -41,7 +41,7 @@ namespace FutureOfRetail.Service
             var beacon = new Beacon();
             try
             {
-                using (var sqlCon = ConnectionClass.GetTrafficButtyCon())
+                using (var sqlCon = ConnectionClass.GetCon())
                 {
                     beacon =
                         sqlCon.Query<Beacon>(String.Format(@"SELECT TOP 1 [Id], [BeaconId], [RetailAreaId], [ShopId]
