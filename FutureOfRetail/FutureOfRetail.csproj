@@ -227,6 +227,7 @@
     <Content Include="AllBeacons.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
     <Content Include="Scripts\Beacons.js" />
+    <Content Include="Scripts\AddProducts.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\jquery-1.11.2.js" />

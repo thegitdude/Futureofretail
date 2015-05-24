@@ -20,7 +20,6 @@ namespace FutureOfRetail.Controllers
 
         }
         [WebMethod]
-        [ScriptMethod(UseHttpGet = true)]
         public static void AddProduct(Product p)
         {
              ProductService.AddProduct(p);
