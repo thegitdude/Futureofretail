@@ -66,7 +66,7 @@ namespace FutureOfRetail.Service
                 using (var sqlCon = ConnectionClass.GetCon())
                 {
                     areas =
-                        sqlCon.Query<RetailArea>(String.Format(@"SELECT r.id, r.name,
+                        sqlCon.Query<RetailArea>(String.Format(@"SELECT r.id, r.name 
                         FROM [{0}].[dbo].[Beacon] b
                         INNER JOIN [{0}].[dbo].[shopMap] s
                         ON b.shopId=s.ShopId
