@@ -16,5 +16,7 @@ namespace FutureOfRetail.Model
         public string Url { get; set; }
 
         public string ShopId { get; set; }
+
+        public string Code { get; set; }
     }
 }
