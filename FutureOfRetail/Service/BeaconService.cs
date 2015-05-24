@@ -21,9 +21,9 @@ namespace FutureOfRetail.Service
                         (BeaconId, RetailAreaId, ShopId) Values 
                         (@beaconId, @retailAreaId, @shopId)", ConnectionClass.sampleDatabaseName), new
                                                              {
-                                                                 beaconId =b.BeaconID,
+                                                                 beaconId = b.BeaconID,
                                                                  retailAreaId = b.RetailAreaID,
-                                                                 shopID= b.ShopId,
+                                                                 shopID = b.ShopId,
                                                              });
 
                     // Do something with the results:
@@ -56,6 +56,33 @@ namespace FutureOfRetail.Service
                 Console.WriteLine(ex.Message);
             }
             return beacon;
+        }
+
+        public static List<RetailArea> GetShopAreas(int beaconId)
+        {
+            var areas = new List<RetailArea>();
+            try
+            {
+                using (var sqlCon = ConnectionClass.GetCon())
+                {
+                    areas =
+                        sqlCon.Query<RetailArea>(String.Format(@"SELECT r.id, r.name,
+                        FROM [{0}].[dbo].[Beacon] b
+                        INNER JOIN [{0}].[dbo].[shopMap] s
+                        ON b.shopId=s.ShopId
+                        INNER JOIN [{0}].[dbo].[RetailArea] r
+                        ON r.id=s.retailAreaid
+                        where b.beaconid=@beaconId", ConnectionClass.sampleDatabaseName), new { beaconId = beaconId }).ToList();
+
+                    // Do something with the results:
+                    // Additional code here...
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            return areas;
         }
 
     }

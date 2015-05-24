@@ -25,5 +25,14 @@ namespace FutureOfRetail.Controllers
             return BeaconService.GetBeaconData(id);
         }
 
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static List<RetailArea> GetAreas(int id)
+        {
+            
+            return BeaconService.GetShopAreas(id);
+        }
+
+
     }
 }
