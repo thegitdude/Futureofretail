@@ -18,7 +18,7 @@ namespace FutureOfRetail.Service
                 {
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Statistic] 
-                        (Created, EventType) Values 
+                        (CreatedDate, EventType) Values 
                         (@created, @eventType)", ConnectionClass.sampleDatabaseName), new
                                                             {
                                                                 created = DateTime.Now,
