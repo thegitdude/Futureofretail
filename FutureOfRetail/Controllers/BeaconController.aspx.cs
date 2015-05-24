@@ -29,7 +29,7 @@ namespace FutureOfRetail.Controllers
         [ScriptMethod(UseHttpGet = true)]
         public static List<RetailArea> GetAreas(int id)
         {
-            
+            StatisticService.AddEvent("beacon");
             return BeaconService.GetShopAreas(id);
         }
 
