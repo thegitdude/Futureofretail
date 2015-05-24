@@ -22,12 +22,12 @@
 <!--each tile should specify what page type it opens (to determine which animation) and the corresponding page name it should open-->
   <div class="dashboard clearfix">
     <ul class="tiles">
-      <div class="col1 clearfix" onclick="location.href='addbeacon.aspx';">
-        <li class="tile tile-big tile-1a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+      <div class="col1 clearfix" >
+        <li class="tile tile-big tile-1a slideTextUp" onclick="location.href='addbeacon.aspx';" data-page-type="r-page" data-page-name="random-r-page">
           <div><p>Add new beacon</p></div>
           <div><p>Add new beacon</p></div>
         </li>
-        <li class="tile tile-big tile-2a slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+        <li class="tile tile-big tile-2a slideTextUp" onclick="location.href='addproduct.aspx';" data-page-type="r-page" data-page-name="random-r-page">
           <div><p>Add product</p></div>
           <div><p>Add product</p></div>
         </li>
