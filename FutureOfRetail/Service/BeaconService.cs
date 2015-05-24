@@ -24,7 +24,7 @@ namespace FutureOfRetail.Service
                                                                  beaconId = b.BeaconID,
                                                                  retailAreaId = b.RetailAreaID,
                                                                  shopID = b.ShopId,
-                                                                 name= b.RetailAreaName
+                                                                 retailAreaName = b.RetailAreaName
                                                              });
 
                     // Do something with the results:
