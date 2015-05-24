@@ -19,11 +19,12 @@ namespace FutureOfRetail.Service
                     var orderHistoryEntries =
                         sqlCon.Execute(String.Format(@"Insert into [{0}].[dbo].[Beacon] 
                         (BeaconId, RetailAreaId, ShopId) Values 
-                        (@beaconId, @retailAreaId, @shopId)", ConnectionClass.sampleDatabaseName), new
+                        (@beaconId, (select id from retailArea where name=@retailAreaName), @shopId)", ConnectionClass.sampleDatabaseName), new
                                                              {
                                                                  beaconId = b.BeaconID,
                                                                  retailAreaId = b.RetailAreaID,
                                                                  shopID = b.ShopId,
+                                                                 name= b.RetailAreaName
                                                              });
 
                     // Do something with the results:

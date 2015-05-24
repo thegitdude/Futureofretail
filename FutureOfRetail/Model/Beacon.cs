@@ -14,5 +14,7 @@ namespace FutureOfRetail.Model
         public int RetailAreaID { get; set; }
 
         public int ShopId { get; set; }
+
+        public string RetailAreaName { get; set; }
     }
 }
