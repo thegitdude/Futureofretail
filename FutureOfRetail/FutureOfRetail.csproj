@@ -224,7 +224,9 @@
     <Content Include="packages.config" />
     <Content Include="css\bootstrap\bootstrap-theme.css.map" />
     <Content Include="css\bootstrap\bootstrap.css.map" />
+    <Content Include="AllBeacons.aspx" />
     <None Include="Scripts\jquery-1.8.2.intellisense.js" />
+    <Content Include="Scripts\Beacons.js" />
     <Content Include="Scripts\bootstrap\bootstrap.js" />
     <Content Include="Scripts\bootstrap\bootstrap.min.js" />
     <Content Include="Scripts\bootstrap\jquery-1.11.2.js" />
@@ -374,6 +376,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Model\Beacon.cs" />
+    <Compile Include="Model\BeaconData.cs" />
     <Compile Include="Model\Product.cs" />
     <Compile Include="Model\Shop.cs" />
     <Compile Include="Model\RetailArea.cs" />
@@ -410,6 +413,13 @@
     </Compile>
     <Compile Include="ViewSwitcher.ascx.designer.cs">
       <DependentUpon>ViewSwitcher.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="AllBeacons.aspx.cs">
+      <DependentUpon>AllBeacons.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="AllBeacons.aspx.designer.cs">
+      <DependentUpon>AllBeacons.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

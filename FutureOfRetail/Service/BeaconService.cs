@@ -85,6 +85,30 @@ namespace FutureOfRetail.Service
             }
             return areas;
         }
+        public static List<BeaconData> GetAllBeacons()
+        {
+            List<BeaconData> beacons = new List<BeaconData>();
+            try
+            {
+                using (var sqlCon = ConnectionClass.GetCon())
+                {
+                    beacons =
+                        sqlCon.Query<BeaconData>(String.Format(@"SELECT b.BeaconId, r.Name as ShopAreaName, s.Name as ShopName FROM dbo.Beacon b JOIN RetailArea r 
+                        ON b.RetailAreaId = r.Id JOIN Shop s ON r.Id = s.id ",
+                        ConnectionClass.sampleDatabaseName)).ToList();
 
+
+
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+
+
+            return beacons;
+        }
     }
 }

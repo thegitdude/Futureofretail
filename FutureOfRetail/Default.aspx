@@ -33,7 +33,7 @@
         </li>
       </div>
 
-      <div class="col2 clearfix">
+      <div class="col2 clearfix" onclick="location.href='allbeacons.aspx';">
         <li class="tile tile-big tile-1b slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
           <div><p>See all beacons</p></div>
           <div><p>See all beacons</p></div>

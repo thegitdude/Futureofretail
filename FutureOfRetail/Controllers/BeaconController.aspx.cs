@@ -32,7 +32,12 @@ namespace FutureOfRetail.Controllers
             StatisticService.AddEvent("beacon");
             return BeaconService.GetShopAreas(id);
         }
-
+        [WebMethod]
+        [ScriptMethod(UseHttpGet = true)]
+        public static List<BeaconData> GetAllBeacons()
+        {
+            return BeaconService.GetAllBeacons();
+        }
 
     }
 }
