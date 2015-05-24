@@ -10,6 +10,6 @@
 namespace FutureOfRetail {
     
     
-    public partial class Dashboard {
+    public partial class _Default {
     }
 }
