@@ -93,8 +93,9 @@ namespace FutureOfRetail.Service
                 using (var sqlCon = ConnectionClass.GetCon())
                 {
                     beacons =
-                        sqlCon.Query<BeaconData>(String.Format(@"SELECT b.BeaconId, r.Name as ShopAreaName, s.Name as ShopName FROM dbo.Beacon b JOIN RetailArea r 
-                        ON b.RetailAreaId = r.Id JOIN Shop s ON r.Id = s.id ",
+                        sqlCon.Query<BeaconData>(String.Format(@"SELECT b.BeaconId, r.Name as ShopAreaName, s.Name as ShopName
+                        FROM dbo.Beacon b JOIN RetailArea r 
+                        ON b.RetailAreaId = r.Id JOIN Shop s ON b.shopId = s.id ",
                         ConnectionClass.sampleDatabaseName)).ToList();
 
 
