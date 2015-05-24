@@ -44,8 +44,8 @@
         </li>
       </div>
 
-      <div class="col3 clearfix" onclick="">      
-        <li class="tile tile-big tile-1c slideTextUp" data-page-type="r-page" data-page-name="random-r-page">
+      <div class="col3 clearfix">      
+        <li class="tile tile-big tile-1c slideTextUp" data-page-type="r-page" data-page-name="random-r-page" onclick="location.href='customerstatistics.aspx'">
           <div><p>See statistics</p></div>
           <div><p>See statistics</p></div>
         </li>
