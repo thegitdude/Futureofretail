@@ -21,7 +21,7 @@ namespace FutureOfRetail.Controllers
         [ScriptMethod(UseHttpGet = true)]
         public static Product GetProductByCode(string code)
         {
-            //html encode
+            StatisticService.AddEvent("code");
             return ProductService.GetProductsByCode(code);
         }
     }
