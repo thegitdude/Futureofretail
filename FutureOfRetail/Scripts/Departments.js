@@ -3,7 +3,7 @@
 
 var ViewModel = function () {
     this.retailAreas = ko.observableArray();
-    this.beaconDetails = ko.observable();
+    this.beaconDetails = ko.observableArray();
     this.ShopId = ko.observable();
     this.BeaconId = ko.observable();
     this.selectedRetailArea = ko.observable();
@@ -22,7 +22,7 @@ var ViewModel = function () {
         }
     });
     registerBeacon = function () {
-        beaconDetails = new beacon(ShopId(), BeaconId(), selectedRetailArea());
+        beaconDetails = {b:new beacon(ShopId(), BeaconId(), selectedRetailArea())};
         var jsonData = ko.toJSON(beaconDetails);
         $.ajax({
             url: "/AddBeacon.aspx/AddBeacon",
@@ -36,14 +36,12 @@ var ViewModel = function () {
                 alert("error occured");
             }
         });
-
-
     }
     beacon = function (ShopId, BeaconId, selectedRetailArea) {
         var self = this;
-        self.ShopId = ko.observable(ShopId);
-        self.BeaconID = ko.observable(BeaconId);
-        self.RetailAreaID = ko.observable(selectedRetailArea);
+        self.ShopId = ko.observable(parseInt(ShopId));
+        self.BeaconID = ko.observable(parseInt(BeaconId));
+        self.RetailAreaName = ko.observable(selectedRetailArea);
     }
 };
 $(document).ready(function () {
