@@ -20,6 +20,7 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <div id="alert"></div>
     <div class="form-group">
         <label class="control-label col-sm-2" for="email">Shop Id:</label>
         <div class="col-sm-10">
