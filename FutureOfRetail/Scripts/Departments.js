@@ -22,7 +22,7 @@ var ViewModel = function () {
         }
     });
     registerBeacon = function () {
-        beaconDetails = {b:new beacon(ShopId(), BeaconId(), selectedRetailArea())};
+        beaconDetails = { b: new beacon(ShopId(), BeaconId(), selectedRetailArea()) };
         var jsonData = ko.toJSON(beaconDetails);
         $.ajax({
             url: "/AddBeacon.aspx/AddBeacon",
@@ -30,7 +30,9 @@ var ViewModel = function () {
             type: "POST",
             data: jsonData,
             success: function (data) {
-                alert("success");
+                $('#alert').append(
+        '<div class="alert alert-success"><button type="button" class="close" data-dismiss="alert">' +
+            '&times;</button>Your beacon is registered successfully!</div>');
             },
             error: function (data) {
                 alert("error occured");
