@@ -22,6 +22,12 @@
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div id="alert"></div>
     <div class="form-group">
+        <label class="control-label col-sm-2" for="email">Product Code:</label>
+        <div class="col-sm-10">
+            <input type="text" class="form-control" placeholder="Product Code" data-bind="value: ProductCode">
+        </div>
+    </div>
+    <div class="form-group">
         <label class="control-label col-sm-2" for="email">Product Name:</label>
         <div class="col-sm-10">
             <input type="text" class="form-control" placeholder="Product Name" data-bind="value: ProductName">

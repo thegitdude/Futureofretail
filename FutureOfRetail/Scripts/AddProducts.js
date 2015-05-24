@@ -2,14 +2,14 @@
 /// <reference path = "knockout-3.3.0.js"/>
 
 var ViewModel = function () {
-    this.product = ko.observableArray();
+    this.ProductCode = ko.observable();
     this.ProductName = ko.observable();
     this.ProductDescription = ko.observable();
     this.ShopURL = ko.observable();
     this.ShopID = ko.observable();
 
     registerProduct = function () {
-        newProduct = { p: new product(ProductName(), ProductDescription(), ShopURL(), ShopID()) };
+        newProduct = { p: new product(ProductCode(), ProductName(), ProductDescription(), ShopURL(), ShopID()) };
         var jsonData = ko.toJSON(newProduct);
         $.ajax({
             url: "/Controllers/ProductController.aspx/AddProduct",
@@ -26,8 +26,9 @@ var ViewModel = function () {
             }
         });
     }
-    product = function (ProductName, ProductDescription, ShopURL, ShopID) {
+    product = function (ProductCode, ProductName, ProductDescription, ShopURL, ShopID) {
         var self = this;
+        self.Code = ko.observable(ProductCode);
         self.ShopId = ko.observable(parseInt(ShopID));
         self.Name = ko.observable(ProductName);
         self.Description = ko.observable(ProductDescription);
