@@ -13,7 +13,7 @@
         </div>
     </section>
 </asp:Content>
-<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+<asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="DashboardContent">
     <div class="demo-wrapper">
         <!-- classnames for the pages should include: 1) type of page 2) page name-->
         <!--each tile should specify what page type it opens (to determine which animation) and the corresponding page name it should open-->
