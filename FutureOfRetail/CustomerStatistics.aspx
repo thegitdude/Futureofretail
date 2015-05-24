@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerStatistics.aspx.cs" Inherits="FutureOfRetail.CustomerStatistics" MasterPageFile="~/Site.Master"%>
+﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="CustomerStatistics.aspx.cs" Inherits="FutureOfRetail.CustomerStatistics" MasterPageFile="~/Site.Master" %>
 
 <asp:Content runat="server" ID="Content1" ContentPlaceHolderID="HeadContent">
     <script src="Scripts/Chart.js" type="text/javascript"></script>
@@ -6,14 +6,14 @@
     <script src="Scripts/bootstrap/jquery-1.11.2.js" type="text/javascript"></script>
     <script type="text/javascript">
         $(document).ready(function () {
-            statistics.loadProductChart();
+            statistics.loadStatistics();
             setInterval(function () {
-                statistics.loadProductChart();
+                statistics.loadStatistics();
                 /* other code here as required */
             }, 5000);
         });
     </script>
-    </asp:Content>
+</asp:Content>
 <asp:Content runat="server" ID="FeaturedContent" ContentPlaceHolderID="FeaturedContent">
     <section class="featured">
         <div class="content-wrapper">
@@ -29,12 +29,18 @@
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
     <div class="row">
-        <input value="Beacon traffic" class="btn btn-info col-lg-4"/>
-        
-        <input  value="Bar-code usage" class="btn btn-info col-lg-4"/>
-           
-        <input value="Product interest" class="btn btn-info col-lg-4"/>
-        </div>
-    <div class="row" style="height:20px;"></div>
-   <canvas id="myChart" width="950" height="400"></canvas>
+        <button value="Beacon traffic" class="btn btn-info col-lg-4" type="button" onclick="statistics.setTag('beacon')">
+            Beacon traffic
+        </button>
+
+        <button value="Bar-code usage" class="btn btn-info col-lg-4" type="button" onclick="statistics.setTag('barcode')">
+            Bar-code usage
+        </button>
+
+        <button value="Product interest" class="btn btn-info col-lg-4" type="button" onclick="statistics.setTag('test')">
+            Product interest
+        </button>
+    </div>
+    <div class="row" style="height: 20px;"></div>
+    <canvas id="myChart" width="950" height="400"></canvas>
 </asp:Content>

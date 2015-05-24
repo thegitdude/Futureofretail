@@ -1,4 +1,14 @@
 ﻿var statistics = {
+    loadStatistics: function () {
+        if (globaltag == 'barcode')
+            this.getStatistics('barcode');
+        else
+            if (globaltag == 'beacon')
+                this.getStatistics('beacon');
+            else
+                if (globaltag == 'test')
+                    this.getStatistics('test');
+    },
     loadBarcodeChart: function () {
         this.getStatistics('barcode');
     },
@@ -33,8 +43,14 @@
                     alert("error occured");
                 }
             });
+    },
+    setTag:function(tag)
+    {
+        globaltag = tag;
+        this.loadStatistics(tag);
     }
 };
+var globaltag = 'test';
 
 var barData = {
     labels: ['Italy', 'UK', 'USA', 'Germany', 'France', 'Japan'],
