@@ -193,6 +193,7 @@
     <Content Include="Content\themes\base\minified\jquery.ui.theme.min.css" />
     <Content Include="Controllers\BarcodeController.aspx" />
     <Content Include="Controllers\BeaconController.aspx" />
+    <Content Include="Controllers\ProductController.aspx" />
     <Content Include="Controllers\StatisticsController.aspx" />
     <Content Include="css\bootstrap\bootstrap-theme.css" />
     <Content Include="css\bootstrap\bootstrap-theme.min.css" />
@@ -333,6 +334,13 @@
     </Compile>
     <Compile Include="Controllers\BeaconController.aspx.designer.cs">
       <DependentUpon>BeaconController.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Controllers\ProductController.aspx.cs">
+      <DependentUpon>ProductController.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Controllers\ProductController.aspx.designer.cs">
+      <DependentUpon>ProductController.aspx</DependentUpon>
     </Compile>
     <Compile Include="Controllers\StatisticsController.aspx.cs">
       <DependentUpon>StatisticsController.aspx</DependentUpon>

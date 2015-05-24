@@ -28,5 +28,13 @@
     </section>
 </asp:Content>
 <asp:Content runat="server" ID="BodyContent" ContentPlaceHolderID="MainContent">
+    <div class="row">
+        <input value="Beacon traffic" class="btn btn-info col-lg-4"/>
+        
+        <input  value="Bar-code usage" class="btn btn-info col-lg-4"/>
+           
+        <input value="Product interest" class="btn btn-info col-lg-4"/>
+        </div>
+    <div class="row" style="height:20px;"></div>
    <canvas id="myChart" width="950" height="400"></canvas>
 </asp:Content>
