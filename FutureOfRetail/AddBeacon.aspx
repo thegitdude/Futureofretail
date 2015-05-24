@@ -23,26 +23,25 @@
     <div class="form-group">
         <label class="control-label col-sm-2" for="email">Shop Id:</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="Shop Id">
+            <input type="text" class="form-control" placeholder="Shop Id" data-bind="value: ShopId">
         </div>
     </div>
     <div class="form-group">
         <label class="control-label col-sm-2" for="email">Beacon Id:</label>
         <div class="col-sm-10">
-            <input type="text" class="form-control" placeholder="Enter Beacon Id">
+            <input type="text" class="form-control" placeholder="Enter Beacon Id" data-bind="value: BeaconId">
         </div>
     </div>
     <div class="form-group">
-        <label class="control-label col-sm-2" for="email">Section:</label>
+        <label class="control-label col-sm-2" for="email">Retail area:</label>
         <div class="col-sm-10">
-            <select class="col-md-6 col-sm-6" data-bind="options: retailAreas">
-            </select>
+            <select class="col-md-6 col-sm-6" data-bind="options: retailAreas, value: selectedRetailArea"></select>
         </div>
     </div>
 
     <div class="form-group">
         <div class="col-sm-offset-2 col-sm-10">
-            <button type="submit" class="btn btn-primary">Register beacon</button>
+            <button class="btn btn-primary" data-bind="click: registerBeacon">Register beacon</button>
         </div>
     </div>
 </asp:Content>
