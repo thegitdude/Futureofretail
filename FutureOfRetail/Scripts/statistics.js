@@ -1,7 +1,7 @@
 ﻿var statistics = {
     loadStatistics: function () {
-        if (globaltag == 'barcode')
-            this.getStatistics('barcode');
+        if (globaltag == 'code')
+            this.getStatistics('code');
         else
             if (globaltag == 'beacon')
                 this.getStatistics('beacon');

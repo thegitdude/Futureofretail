@@ -33,7 +33,7 @@
             Beacon traffic
         </button>
 
-        <button value="Bar-code usage" class="btn btn-info col-lg-4" type="button" onclick="statistics.setTag('barcode')">
+        <button value="Bar-code usage" class="btn btn-info col-lg-4" type="button" onclick="statistics.setTag('code')">
             Bar-code usage
         </button>
 
